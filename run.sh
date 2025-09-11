@@ -1,3 +1,5 @@
 #!/bin/bash
-# Clone the GitHub repository
-git clone "https://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@github.com/italotec/primos.git"
+
+GITHUB_TOKEN="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"
+
+git clone "https://$GITHUB_TOKEN@github.com/italotec/primos.git"
