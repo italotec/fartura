@@ -1,5 +1,8 @@
-#!/bin/bash
+#!/usr/bin/expect -f
 
-#GITHUB_TOKEN="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"
+set token "ghp_seuTokenAqui"
+set repo "https://github.com/italotec/primos.git"
 
-git clone "https://github.com/italotec/primos.git"
+spawn git clone $repo
+expect "Password*:" { send "$token\r" }
+interact
